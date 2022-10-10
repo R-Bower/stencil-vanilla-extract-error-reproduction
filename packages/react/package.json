@@ -1,0 +1,35 @@
+{
+  "name": "uc-react",
+  "sideEffects": false,
+  "version": "0.0.3",
+  "description": "React specific wrapper for universal-components",
+  "scripts": {
+    "build": "npm-run-all clean compile",
+    "clean": "yarn rimraf dist",
+    "compile": "yarn run tsc",
+    "tsc": "tsc -p .",
+    "dev": "tsc -w -p .",
+    "rollup": "rollup -c"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "dependencies": {
+    "universal-components": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.36",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rimraf": "^3.0.2"
+  },
+  "peerDependencies": {
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0"
+  }
+}
